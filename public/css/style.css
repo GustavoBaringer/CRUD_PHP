@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+}
+
+.sidebar {
+    display: flex;
+    height: 100vh;
+    background-color: #40679ce3;
+    justify-content: center;
+    padding: 16px;
+    flex-direction: column;
+    filter: drop-shadow(0 0 0.75rem grey);
+}
+
+.items-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.items-wrapper i {
+    font-size: 46px;
+    color: white;
+}
+
+.items-wrapper i:hover {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.items-wrapper a i.active,
+.items-wrapper a i:hover.active {
+    color: #28bc88 !important;
+}
+
+.page-content {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    width: 100%;
+    align-items: center;
+}
+
+#usuarios-table,
+#departamentos-table,
+#cargos-table,
+#centro_custos-table {
+    margin-top: 30px;
+    width: 100%;
+}
+
+#modalSucesso .modal-header {
+    background-color: #198754;
+    color: white;
+}
