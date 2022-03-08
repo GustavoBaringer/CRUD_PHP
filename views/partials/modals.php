@@ -111,6 +111,35 @@
     </div>
 </div>
 
+<!-- Modal importar usuarios -->
+<div class="modal fade" id="modalImportarUsuarios" tabindex="-1" aria-labelledby="modalImportarUsuarios" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"> IMPORTAR USUÁRIOS </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form id="formImportarUsuarios" enctype="multipart/form-data" method="post" action="../routes/routes.php">
+                <input type="hidden" name="action" value="importarUsuarios">
+                <div class=" modal-body">
+                    <div class="mb-3">
+                        <label for="file_usuarios" class="form-label">Selecione o arquivo</label>
+                        <input type="file" accept=".csv,.xls" class="form-control" id="file_usuarios" name="file_usuarios" aria-describedby="file_usuarios" required>
+                    </div>
+                    <br>
+                    <div>
+                        <p>ATENÇÃO - O arquivo enviado deve ser no formato .csv e conter apenas 6 colunas, sendo elas na seguinte ordem: nome, sobrenome, email, senha, ID do cargo, ID do departamento e ID do centro de custo</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Salvar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
 <!-- Modal Departamentos-->
 <div class="modal fade" id="modalDepartamento" tabindex="-1" aria-labelledby="modalDepartamento" aria-hidden="true">
     <div class="modal-dialog">

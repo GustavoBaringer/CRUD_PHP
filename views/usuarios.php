@@ -26,6 +26,10 @@ $centroCustos = $CentroCustosController->getCentroCustos();
         <i class="bi bi-plus-lg"></i>
         <span>Adicionar</span>
     </button>
+    <button id="btnImportarUsuarios" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalImportarUsuarios">
+        <i class="bi bi-plus-lg"></i>
+        <span>Importar</span>
+    </button>
 </div>
 
 <table class="table table-hover" id="usuarios-table">

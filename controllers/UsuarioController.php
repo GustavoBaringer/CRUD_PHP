@@ -216,4 +216,27 @@ class UsuarioController
     {
         return $this->userModel->adicionarUsuario($this);
     }
+
+    public function importarUsuarios()
+    {
+        try {
+            foreach (file($_FILES['file_usuarios']['tmp_name']) as $linha) {
+                $linha = explode(',', $linha);
+
+                $this->setNome($linha[0]);
+                $this->setSobrenome($linha[1]);
+                $this->setEmail($linha[2]);
+                $this->setSenha($linha[3]);
+                $this->setId_cargo($linha[4]);
+                $this->setId_departamento($linha[5]);
+                $this->setId_centro_custo($linha[6]);
+
+                $this->adicionarUsuario();
+            }
+
+            return header('Location: ' . $_SERVER['HTTP_REFERER']);
+        } catch (\Exception $e) {
+            throw new Exception($e->getMessage());
+        }
+    }
 }

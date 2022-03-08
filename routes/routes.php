@@ -26,6 +26,9 @@ switch ($request) {
     case 'adicionarUsuario':
         return $UsuarioController->adicionarUsuario();
         break;
+    case 'importarUsuarios':
+        return $UsuarioController->importarUsuarios();
+        break;
 
         /**
          * DEPARTAMENTOS
